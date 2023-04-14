@@ -8,15 +8,20 @@ import { useEffect, useState } from "react";
 function App() {
   const configuration = new Configuration({
     apiKey: process.env.VITE_OPEN_AI_KEY,
+
+
   });
   // console.log(import.meta.env.VITE_Open_AI_Key);
 
   // Use console for the result we import the data in app.jsx file
   // console.log(arrayItems);
   const openai = new OpenAIApi(configuration);
+  // here use state hook is used
   const [option, setOption] = useState({});
   const [result, setResult] = useState("");
   const [input, setInput] = useState("");
+
+  
   // console.log(import.meta.env.VITE_Open_AI_Key);
 
   const selectOption = (option) => {
